@@ -2,22 +2,22 @@
 
 
 def _is_prime(number):
-    if number >= 2:
-        for divisor in range(2,number):
-            if (number % divisor == 0):
-                return False
-            else:
-                return True
-    
-    return False
+    if number <= 1:
+        return False
+        
+    for divisor in range(2,number):
+        if (number % divisor == 0):
+            return False
+        
+    return True
 
 
 def list_of_prime_numbers(max_number):
     prime_numbers = []
     
-    for prime in range(max_number):
-        if _is_prime:
-            prime_numbers.append(prime)
+    for n in range(2,max_number+1):
+        if _is_prime(n):
+            prime_numbers.append(n)
     
     return prime_numbers
         
